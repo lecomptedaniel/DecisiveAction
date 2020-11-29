@@ -1,0 +1,7 @@
+library(ggplot2)
+library(plotly)
+gg <- ggplot(iris) + 
+  geom_point(aes(Sepal.Length, Sepal.Width,color=Species,size=Petal.Length))
+gg
+htmlwidgets::saveWidget(gg, "test.html")
+

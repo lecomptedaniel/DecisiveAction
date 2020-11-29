@@ -1,0 +1,22 @@
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(widgetframe)
+p <- plot_ly(x = 1:10, y = 1:10) %>% add_markers()
+widget_file_size <- function(p) {
+  d <- tempdir()
+  withr::with_dir(d, htmlwidgets::saveWidget(p, "index.html"))
+  f <- file.path(d, "index.html")
+  mb <- round(file.info(f)$size / 1e6, 3)
+  message("File is: ", mb," MB")
+}
+widget_file_size(p)
+widget_file_size(partial_bundle(p))
+p
+saveWidget(p, "p1.html", selfcontained = F, libdir = "lib")
+htmltools::tags$iframe(
+  src = "p1.html", 
+  scrolling = "no", 
+  seamless = "seamless",
+  frameBorder = "0"
+)
