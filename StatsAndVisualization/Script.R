@@ -2,6 +2,13 @@ library(ggplot2)
 library(plotly)
 library(htmlwidgets)
 library(widgetframe)
+install.packages("utils")
+data <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv",
+                 na.strings = "", fileEncoding = "UTF-8-BOM")
+colnames(data)
+
+
+
 p <- plot_ly(x = 1:10, y = 1:10) %>% add_markers()
 widget_file_size <- function(p) {
   d <- tempdir()
