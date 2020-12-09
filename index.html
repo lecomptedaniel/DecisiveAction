@@ -16,76 +16,99 @@
   </head>
   <body class="Center">
     <!-- BREAK HERE FOR FIRST PAGE-->
-    <div class="container vh-100 d-flex flex-column justify-content-around GSAPBody">
+    <div class="container section d-flex flex-column GSAPBody">
       <h1 class="SplashHeaderFont">Decisive</h1>
-      <p class="SplashMediumFont">The necessity of early, rapid, and decisive action</p>
-      <p class="SplashMediumFont">A story of COVID-19 impact and decision, or lack thereof</p>
+      <div class="Spacer">
+        <p class="SplashMediumFont">The necessity of early, rapid, and decisive action</p>
+        <p class="SplashMediumFont">A story of COVID-19 impact and decision, or lack thereof</p>
+      </div>
+      <!-- <img  src="Assets/Icons/HomePageIcons.svg" alt="Circular diagram of two people communicating, a microscope, and a data chart with arrows between" > -->
 
-      <p class="SplashSmallFont">Swipe to Learn more</p>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30vw" height="30vh">
+          <image x="0px" y="0px" width="30vw" height="30vh"  xlink:href="data:img/png;base64,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" />
+        </svg>
+      </div>
+      <div class="TextArrow SwipeUp">
+        <p class="SplashSmallFont">Scroll to Learn more</p>
 
-      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
-        <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-      </svg>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+          <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+        </svg>
+      </div>
     </div>
 
 
 
 
     <!-- BREAK HERE FOR SECOND PAGE-->
-    <div class="container vh-100 d-flex flex-column justify-content-around scrollpoint1">
-      <p class="MainBodyFont" id="scrollpoint">When the novel Coronavirus - 19  (COVID)<br>
-        emerged as a deadly force, we saw varied <br>
-        responses from countries throughout the world.<br>
-        <br>
-        <br>
-        Some took rapid, early, and decisive action <br>
-        to confront COVID. Others, unfortunately, <br>
-        took far too long to any take action, <br>
-        much less action that had a serious impact.<br>
-        <br>
-        <br>
-        <br>
+    <div class="container section d-flex flex-column justify-content-around scrollpoint1">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <p class="MainBodyFont" id="scrollpoint">When the novel Coronavirus - 19  (COVID)
+            emerged as a deadly force, we saw varied
+            responses from countries throughout the world.
+            <!-- <br>
+            <br> -->
+            Some took rapid, early, and decisive action
+            to confront COVID. Others, unfortunately,
+            took far too long to any take action,
+            much less action that had a serious impact.
+            <br>
+            <br>
+            <br>
 
-        To see the how COVID has impacted the world, press play on the right
-      </p>
+            To see the how COVID has impacted the world, press play on the right
+          </p>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="StatsAndVisualization/p1.html" class="embed-responsive-item" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
       </div>
 
-      <p class="MainBodyFont">Ready to learn about how early and rapid action has saved lives? Swipe up</p>
-      
-      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
-        <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-      </svg>
+      <div class="TextArrow SwipeUp">
+        <p class="MainBodyFont">Ready to learn about how early and rapid action has saved lives? Swipe up</p>
+        
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+          <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+        </svg>
+      </div>
     </div>
 
     <!-- BREAK HERE FOR THIRD PAGE-->
-    <div class="container vh-100 d-flex flex-column justify-content-around">
-      <p class="MainBodyFont">In Europe, several countries were ravaged <br>
-        by COVID, where hospitals had to turn away <br>
-        patients due to the exceeding capacity <br>
-        within weeks of the first patient in the country. 
-        <br>
-        <br>
-        For the few countries that were able to <br>
-        make the quick decisions to shut down <br>
-        travel, promote social distancing and <br>
-        reduce community spread. 
-        <br>
-        <br>
-        These are called measures of containment <br>
-        and mitigation. These are the best actions <br>
-        we can take as a society to prevent spread <br>
-        and save lives until a vaccine or similar <br>
-        level of elimination or protection is available.
-        <br>
-        <br>
-        See the timeline below to get an idea of <br>
-        how some countries in Europe were able to <br>
-        contain and mitigate spread.
-      </p>
+    <div class="container section d-flex flex-column justify-content-around">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <p class="MainBodyFont">In Europe, several countries were ravaged
+            by COVID, where hospitals had to turn away
+            patients due to the exceeding capacity
+            within weeks of the first patient in the country. 
+            <!-- <br>
+            <br> -->
+            For the few countries that were able to
+            make the quick decisions to shut down
+            travel, promote social distancing and
+            reduce community spread. 
+            <!-- <br>
+            <br> -->
+            These are called measures of containment
+            and mitigation. These are the best actions
+            we can take as a society to prevent spread
+            and save lives until a vaccine or similar
+            level of elimination or protection is available.
+            <!-- <br>
+            <br> -->
+            See the timeline below to get an idea of
+            how some countries in Europe were able to
+            contain and mitigate spread.
+          </p>
+        </div>
+      </div>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="StatsAndVisualization/p1.html" class="embed-responsive-item" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
       </div>
