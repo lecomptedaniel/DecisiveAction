@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
     <title>Decisive</title>
   </head>
@@ -18,18 +19,18 @@
     <!-- BREAK HERE FOR FIRST PAGE-->
     <div class="container section d-flex flex-column GSAPBody">
       <h1 class="SplashHeaderFont">Decisive</h1>
-      <div class="Spacer">
+      <div class="Spacer my-4">
         <p class="SplashMediumFont">The necessity of early, rapid, and decisive action</p>
         <p class="SplashMediumFont">A story of COVID-19 impact and decision, or lack thereof</p>
       </div>
       <!-- <img  src="Assets/Icons/HomePageIcons.svg" alt="Circular diagram of two people communicating, a microscope, and a data chart with arrows between" > -->
 
-      <div>
+      <div class="my-4">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30vw" height="30vh">
           <image x="0px" y="0px" width="30vw" height="30vh"  xlink:href="data:img/png;base64,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" />
         </svg>
       </div>
-      <div class="TextArrow SwipeUp">
+      <div class="TextArrow SwipeUp my-5">
         <p class="SplashSmallFont">Scroll to Learn more</p>
 
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -43,11 +44,11 @@
 
 
     <!-- BREAK HERE FOR SECOND PAGE-->
-    <div class="container section d-flex flex-column justify-content-around scrollpoint1">
+    <div class="container section d-flex flex-column justify-content-around GSAPLowerBody">
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <p class="MainBodyFont" id="scrollpoint">When the novel Coronavirus - 19  (COVID)
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <p class="MainBodyFont">When the novel Coronavirus - 19  (COVID)
             emerged as a deadly force, we saw varied
             responses from countries throughout the world.
             <!-- <br>
@@ -63,14 +64,14 @@
             To see the how COVID has impacted the world, press play on the right
           </p>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
       </div>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="StatsAndVisualization/p1.html" class="embed-responsive-item" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
       </div>
 
       <div class="TextArrow SwipeUp">
-        <p class="MainBodyFont">Ready to learn about how early and rapid action has saved lives? Swipe up</p>
+        <p class="MainBodyFont">Ready to learn about how early and rapid action has saved lives? Scroll up!</p>
         
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
@@ -80,10 +81,10 @@
     </div>
 
     <!-- BREAK HERE FOR THIRD PAGE-->
-    <div class="container section d-flex flex-column justify-content-around">
+    <div class="container section d-flex flex-column justify-content-around GSAPLowestBody">
       <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
           <p class="MainBodyFont">In Europe, several countries were ravaged
             by COVID, where hospitals had to turn away
             patients due to the exceeding capacity
@@ -108,26 +109,41 @@
             contain and mitigate spread.
           </p>
         </div>
+        <div class="col-md-2"></div>
       </div>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="StatsAndVisualization/p1.html" class="embed-responsive-item" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
       </div>
-
-      <p class="MainBodyFont">View Full Data and Visualization</p>
+      <div class="container d-flex justify-content-center">
+        <a href="fullvisualization.html" alt="View Full Data and Visualization" class="SplashMediumFont">View Full Data and Visualization</a>
+        
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-up" fill="white" xmlns="http://www.w3.org/2000/svg" style="margin-left:1vw;"
+        transform='rotate(90)'>
+          <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+          <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+        </svg>
+      </div>
     </div>
     <script>
       jQuery(function() {
-          gsap.set($(".GSAPBody"), {css: {opacity: 0}});
+          gsap.set($(".GSAPBody").add(".GSAPLowerBody").add(".GSAPLowestBody"), {css: {opacity: 0}});
           gsap.to($(".GSAPBody"), {css: {opacity: 1},
                                               duration: 1,
                                               delay: 1});
-          // gsap.set($(".scrollpoint1"), {css: {opacity: 0}});
-          gsap.to($("#scrollpoint"), {css: {color: red},
+          gsap.to($(".GSAPLowerBody"), {css: {opacity: 1},
                                       scrollTrigger: {
-                                          trigger: "#scrollpoint",
+                                          trigger: ".GSAPLowerBody",
                                           start: "top center"
                                       },
-                                      duration: 1});
+                                      duration: 2});
+          gsap.to($(".GSAPLowestBody"), {css: {opacity: 1},
+                                      scrollTrigger: {
+                                          trigger: ".GSAPLowestBody",
+                                          start: "top center"
+                                      },
+                                      duration: 2});
+      
+      
       })
     </script>
   </body>

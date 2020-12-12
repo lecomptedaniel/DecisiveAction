@@ -2,6 +2,16 @@
     
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
 /****************** Page Wide Stuff  ****************/
 .Center {
     text-align: center;
@@ -11,7 +21,6 @@
 .scrollcontainer{
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y proximity;
 }
 
 
@@ -22,12 +31,12 @@
     font-family: Epilogue, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 48px;
     line-height: 27px;
     text-align: center;
     letter-spacing: 0.05em;
     color: white;
-    margin: 10vh;
+    margin: 10vh; 
 }
 
 .SplashMediumFont {
@@ -76,7 +85,7 @@
 .SwipeUp{
     animation-name: bounce-3;
     animation-timing-function: ease;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
 }
 
 .TextArrow{
@@ -87,10 +96,23 @@
 
 @keyframes bounce-3 {
     0%   { transform: translateY(0); }
-    30%  { transform: translateY(-50px); }
+    30%  { transform: translateY(50px); }
     50%  { transform: translateY(0); }
     100% { transform: translateY(0); }
 }
+
+/* .SwipeRight{
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+     margin-top: 10vh;
+} */
+
+/* @keyframes bounce-4 {
+    0%   { transform: translateX(0); }
+    30%  { transform: translateX(50px); }
+    50%  { transform: translateX(0); }
+    100% { transform: translateX(0); }
+} */ 
 
 
 /************    SCROLLING ANIMATION      ****************/
@@ -104,5 +126,5 @@
 /*************** HOME PAGE *****************/
 
 .Spacer{
-    margin:10vh;
+    /* margin:10vh; */
 }
