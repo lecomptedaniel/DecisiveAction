@@ -8,14 +8,19 @@ theme_set(theme_classic())
 # data <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv",
 #                  na.strings = "", fileEncoding = "UTF-8-BOM")
 colnames(data)
-lbls <- paste0(month.abb[month(data$date)], " ", lubridate::year(data$date))
-brks <- data$date
+lbls <- paste0(month.abb[month(data$dateRep)]) #, " ", lubridate::year(data$date)
+brks <- data$dateRep
 
 typeof(data$dateRep)
-data$date <- as.Date(data$dateRep)
-typeof(data$date)
+typeof(lbls)
+typeof(brks)
 
-g <- ggplot(data, aes(x=as.Date(dateRep))) +
+
+# data$dateRep
+# data$date <- as.Date(data$dateRep)
+# typeof(data$date)
+
+g <- ggplot(data, aes(x=as.Date(date))) +
   geom_line(aes(y=cases)) +
   labs(title="Cases over time",
        caption="Source: EUCDC",
@@ -26,8 +31,7 @@ g <- ggplot(data, aes(x=as.Date(dateRep))) +
 # .libPaths("C:\users\Daniel Le Compte\OneDrive\Documents\DecisiveAction-main\StatsAndVisualizations")
 
 p <- plotly::ggplotly(g)
-
-
+p
 
 # Not totally sure, but this function will test if the plot and file are there
 # If not, will write. Will overwrite if some other thing is true?
@@ -47,7 +51,7 @@ save_leaflet()
 
 
 
-
+p
 # saveWidget(p, file="p1.html", selfcontained = F, libdir = "C:\Users\Daniel Le Compte\OneDrive\Documents\DecisiveAction-main\StatsAndVisualizations\lib")
 htmltools::tags$iframe(
   src = "p1.html", 
